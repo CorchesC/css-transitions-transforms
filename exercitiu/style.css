@@ -1,9 +1,9 @@
 .body {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 10fr 10fr;
 }
 .header-image {
-    margin: auto;
+    margin-left: 45%;
     transition: transform 0.5s;
     width: 50px;
 }
@@ -13,10 +13,6 @@
 .exemplu-unu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-.exemplu-doi {
-    display: grid;
-    grid-template-columns: 1fr;
 }
 .img-one {
     width: 400px;
@@ -42,42 +38,52 @@
     border-radius: 5em;
 }
 
+
+.photo-container-two {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .photo-container-two-overlay {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.456);
+    opacity: 0%;
     text-align: center;
     color: white;
-    opacity: 0%;
-    transition: all 0.5s ease-in;
+    background-color: rgba(0, 0, 0, 0.395);
+    position: relative;
+    transition: opacity 0.5s ease-in;
 }
 .photo-container-two-card{
+    position: absolute;
     width: 400px;
     height: 300px;
-    position: absolute;
-    top: 0;
 }
 .photo-container-two-image {
     display: block;
+    width: 400px;
+    height: 300px;
 }
 .photo-container-two-overlay:hover {
     opacity: 100%;
-   
-
 }
 
+.photo-container-three {
+    display: flex;
+	flex-direction: column;
+	align-items: start;
+    margin: 100px 0 0 210px;
+}
 .photo-container-three-overlay {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.456);
+    opacity: 0%;
     text-align: center;
     color: white;
-    opacity: 0%;
-    transition: all 0.5s ease-in;
+    background-color: rgba(0, 0, 0, 0.395);
+    position: relative;
+    transition: opacity 0.5s ease-in;
 }
 .photo-container-three-card{
     width: 400px;
     height: 300px;
     position: absolute;
-    top: 0;
 
 }
 .photo-container-three-image {
@@ -88,7 +94,6 @@
 }
 .button-ex2 {
     background-color: blue;
-    border: 2px solid blue;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -96,9 +101,21 @@
     padding: 6px 40px 6px 40px;
     transition: all 1s;
     border-radius: 5em;
- 
+    position: relative;
+}
+.icon {
+    background-image: url(images/download.svg);
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    opacity: 0%;
+    transition: opacity 0.5s ease-in, transform 1s ease-out;
+    left: 50%;
 }
 .button-ex2:hover {
     border: 2px solid rgba(255, 255, 255, 0.733);
 }
-
+.icon:hover {
+    opacity: 100%;
+    transform: translate(60px);
+}
